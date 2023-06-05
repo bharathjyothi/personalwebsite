@@ -124,7 +124,7 @@ nav {display: none;}
 
     .intro__img {
         grid-area: img;
-        min-width: 275px;
+        min-width: 325px;
         position: relative;
         z-index: 2;
     }
@@ -144,18 +144,23 @@ nav {display: none;}
 /* About Section */
 
 .about-me {
-    background-color: #8dd0e2;
-    border-style: solid;
+    background-color: #a3d3e0;
+    /*border-style: solid;
     border-image: linear-gradient(#76aebe, transparent) 0.75;
-    border-bottom: 0;
-    /*box-shadow: 0 0 8px 8px #78b0c0;*/
+    border-bottom: 0;*/
+    box-shadow: 0 0 8px 8px #9fd1de;
     background-size: cover;
     max-width: 1000px;
     margin: 0 auto;
 }
 
 .about-me__img {
+    grid-area: img;
     box-shadow: var(--bs);
+    left: -2em;
+    min-width: 250px;
+    min-height: 350px;
+    
 }
 
 @media (min-width: 600px) {
@@ -178,7 +183,7 @@ nav {display: none;}
         grid-row: 2;
         position: relative;
         left: -1.5em;
-        width: calc(100% + 2.5em);
+        width: calc(100% + 3em);
         padding-left: 1em;
         padding-right: calc(200px + 2em);
     }
