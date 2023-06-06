@@ -4,17 +4,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Bharath Jyothi</title>
-        <link rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/7.0.0/css/normalize.min.css"/>
-        <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-        integrity="sha256-+XWV+Z9+gkZ5FyXu8vJLHh4+XQDjv+Z5XmJ+1j8QZ0E=" crossorigin="anonymous"/>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
         rel="stylesheet">
 
         <link rel="stylesheet" href="App.css">
+
+        <script defer src="App.js"></script>
 
     </head>
     <body>
@@ -76,67 +73,196 @@
         <!-- Experience -->
         <section class="my-experience" id="experience">
             <h2 class="section__title section__title--work">Experience & Projects</h2>
-            <div class="project">
-                <a href="#" class="project__item">
+            <div class="project" data-target="#modal1">
+                <div class="project__item">
                     <img src="images/work1.jpeg" alt="Concurrency" class="project__img">
                     <div class="project-details">
                         <h3>Advanced Data Structures and Concurrency Study</h3>
                         <p>Lehigh Unviersity</p>
                         <p>Summer 2023-present</p>
                     </div>
-                </a>
+                </div>
             </div>
-            <div class="project">
-                <a href="#" class="project__item">
+            <div class="project" data-target="#modal2">
+                <div class="project__item">
                     <img src="images/work2.jpeg" alt="VRi" class="project__img">
                     <div class="project-details">
-                        <h3>Software Development Intern</h3>
+                        <h3>Software Engineering Intern</h3>
                         <p>VRi</p>
                         <p>May 2022 - July 2022</p>
                     </div>
-                </a>
+                </div>
             </div>
-            <div class="project">
-                <a href="#" class="project__item">
+            <div class="project" data-target="#modal3">
+                <div class="project__item" data-target="#modal3">
                     <img src="images/work3.jpg" alt="Lutron" class="project__img">
                     <div class="project-details">
                         <h3>Permit Data Analyst</h3>
                         <p>Lutron Electronics</p>
                         <p>Jan 2023 - Present</p>
                     </div>
-                </a>
+                </div>
             </div>
             <div class="project">
-                <a href="#" class="project__item">
+                <div class="project__item" data-target="#modal4">
                     <img src="images/work5.jpg" alt="Research" class="project__img">
                     <div class="project-details">
                         <h3>Biomedical Machine Learning Research Assistant</h3>
                         <p>Lehigh University</p>
                         <p>May 2021 - Present</p>
                     </div>
-                </a>
+                </div>
             </div>
-            <div class="project">
-                <a href="#" class="project__item">
+            <div class="project" data-target="#modal5">
+                <div class="project__item">
                     <img src="images/work4.png" alt="Google" class="project__img">
                     <div class="project-details">
                         <h3>SoilSense</h3>
-                        <p>Startup</p>
+                        <p>Climate Solution Tackling Eutrophication of Soil</p>
                         <p>April 2023 - Present</p>
                     </div>
-                </a>
+                </div>
             </div>
-            <div class="project">
-                <a href="#" class="project__item">
+            <div class="project" data-target="#modal6">
+                <div class="project__item">
                     <img src="images/work6.png" alt="Lehigh" class="project__img">
                     <div class="project-details">
                         <h3>Lead Software Engineer</h3>
-                        <p>CSBA</p>
+                        <p>Lehigh University Interactive Campus Map</p>
                         <p>Oct 2020 - Aug 2021</p>
                     </div>
-                </a>
+                </div>
             </div>
 
+            <!-- Modals -->
+            <div class="modal" id="modal1">
+                    <div class="header">
+                        <div class="title"
+                            ><h3>
+                                Advanced Data Structures and Concurrency Study
+                            </h3>
+                        </div>
+                        <button class="btn close-modal">&times;</button>
+                    </div>
+                    <div class="body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ut perferendis atque! Porro nisi esse nihil! Quis ad 
+                        quisquam laudantium! Nisi qui sapiente unde labore! Qui, 
+                        modi! Minus, ab quis!
+                    </div>
+            </div>
+
+            <div class="modal" id="modal2">
+                <div class="header">
+                    <div class="title">
+                        <h3>
+                            Software Engineering Intern
+                        </h3>
+                    </div>
+                    <button class="btn close-modal">&times;</button>
+                </div>
+                <div class="body">
+                    <ul>
+                        <li>
+                            Responsible for establishing a consistent server-side connection with potential clients on the DICOM file-loading
+                            service
+                        </li>
+                        <li>
+                            Implemented a caching mechanism that avoided the re-reading and processing of the same DICOM by storing the processed
+                            data in memory or on the hard disk
+                        </li>
+                        <li>
+                            Used multi-processing to parallelize the computation across multiple cores or nodes, significantly reducing the
+                            processing time by about 10 minutes
+                        </li>
+                        <li>
+                            Implemented unit testing for new API to ensure code met quality standards before deployment and usage by medical
+                            partners
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="modal" id="modal3">
+                <div class="header">
+                    <div class="title">
+                        <h3>Permit Data Analyst</h3>
+                    </div>
+                    <button class="btn close-modal">&times;</button>
+                </div>
+                <div class="body body-lutron">
+                    <div class="slideshow-container">
+                        <div class="slide">
+                            <img src="images/Lutron/lutron2.png" alt="lutron2" class="lutron__img">
+                        </div>
+                        <div class="slide">
+                            <img src="images/Lutron/lutron3.png" alt="lutron3" class="lutron__img">
+                        </div>
+                        <a class="prev">&#10094;</a>
+                        <a class="next">&#10095;</a>
+                    </div>
+                    <div class="text-content">
+                        <p>Ingested, cleaned, and standardized APIs for Lutron clients based on contractors in major cities in order to install their high-end light switches.</p> 
+                        <p>Also implemented dynamism to the data ingestion step which allows for continual retrieval of queried data whenever an API is updated</p>
+                        <p>Created a dashboard using AWS cloud features (Glue, S3, and Athena) to visualize lighting solutions based on accumulated data from real-time APIs.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal" id="modal4">
+                <div class="header">
+                    <div class="title">
+                        <h3>
+                            Biomedical Machine Learning Research Assistant
+                        </h3>
+                    </div>
+                    <button class="btn close-modal">&times;</button>
+                </div>
+                <div class="body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ut perferendis atque! Porro nisi esse nihil! Quis
+                    ad
+                    quisquam laudantium! Nisi qui sapiente unde labore! Qui,
+                    modi! Minus, ab quis!
+                </div>
+            </div>
+
+            <div class="modal" id="modal5">
+                <div class="header">
+                    <div class="title">
+                        <h3>
+                            SoilSense
+                        </h3>
+                    </div>
+                    <button class="btn close-modal">&times;</button>
+                </div>
+                <div class="body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ut perferendis atque! Porro nisi esse nihil! Quis
+                    ad
+                    quisquam laudantium! Nisi qui sapiente unde labore! Qui,
+                    modi! Minus, ab quis!
+                </div>
+            </div>
+
+            <div class="modal" id="modal6">
+                <div class="header">
+                    <div class="title">
+                        <h3>
+                            Lead Software Engineer
+                        </h3>
+                    </div>
+                    <button class="btn close-modal">&times;</button>
+                </div>
+                <div class="body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ut perferendis atque! Porro nisi esse nihil! Quis
+                    ad
+                    quisquam laudantium! Nisi qui sapiente unde labore! Qui,
+                    modi! Minus, ab quis!
+                </div>
+            </div>
+
+
+
+            <div id="overlay"></div>
         </section>
 
     <!-- Education -->
