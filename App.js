@@ -29,35 +29,42 @@ window.onclick = (event) => {
 };
 
 // Lutron
-const slides = document.querySelectorAll('.slide');
-let slideIndex = 0;
+// Function to handle slideshow
+function handleSlideshow(slideshow) {
+  const slides = slideshow.querySelectorAll(".slide");
+  let slideIndex = 0;
 
-function showSlide(index) {
-  slides.forEach((slide) => {
-    slide.style.display = 'none';
-  });
-  slides[index].style.display = 'block';
-}
-
-function nextSlide() {
-  slideIndex++;
-  if (slideIndex >= slides.length) {
-    slideIndex = 0;
+  function showSlide(n) {
+    slides.forEach((slide) => (slide.style.display = "none"));
+    slides[n].style.display = "block";
   }
-  showSlide(slideIndex);
-}
 
-function prevSlide() {
-  slideIndex--;
-  if (slideIndex < 0) {
-    slideIndex = slides.length - 1;
+  function nextSlide() {
+    slideIndex++;
+    if (slideIndex >= slides.length) {
+      slideIndex = 0;
+    }
+    showSlide(slideIndex);
   }
+
+  function prevSlide() {
+    slideIndex--;
+    if (slideIndex < 0) {
+      slideIndex = slides.length - 1;
+    }
+    showSlide(slideIndex);
+  }
+
   showSlide(slideIndex);
+
+  const prevBtn = slideshow.querySelector(".prev");
+  const nextBtn = slideshow.querySelector(".next");
+
+  prevBtn.addEventListener("click", prevSlide);
+  nextBtn.addEventListener("click", nextSlide);
 }
 
-showSlide(slideIndex);
-
-document.querySelector('.prev').addEventListener('click', prevSlide);
-document.querySelector('.next').addEventListener('click', nextSlide);
-setInterval(nextSlide, 6000); // Change slide every 3 seconds
+// Find all slideshows and handle each one
+const slideshows = document.querySelectorAll(".slideshow-container");
+slideshows.forEach(handleSlideshow);
 

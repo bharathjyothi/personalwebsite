@@ -214,6 +214,7 @@ nav {display: none;}
 .project {
     width: 100%;
     padding-bottom: 100%;
+    size: 75%;
     /* Maintain aspect ratio for each image */
     position: relative;
     cursor: pointer;
@@ -225,16 +226,15 @@ nav {display: none;}
     left: 0;
     width: 100%;
     height: 100%;
+    border-radius: 60px;
     filter: blur(5px);
-    transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
-        opacity 250ms linear;
+    transition: opacity 250ms linear;
 }
 
 .project__img img {
-    width: 100%;
-    height: 100%;
+    width: 95%;
+    height: 95%;
     object-fit: cover;
-    transition: filter 0.3s ease;
 }
 
 .project-details {
@@ -247,11 +247,16 @@ nav {display: none;}
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(233, 244, 244, 0.79);
     color: var(--clr-dark);
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 60px;
     transition: opacity 0.3s ease;
+}
+
+.project-details-map {
+    background-color: rgba(243, 74, 74, 0.142);
+    border-radius: 50px;
 }
 
 .project__item:hover .project-details:not(button) {
@@ -261,7 +266,6 @@ nav {display: none;}
 .project__img:hover,
 .project__item:focus .project__img {
     filter: blur(0);
-    transform: scale(1.1);
     opacity: 0.75;
 }
 
@@ -345,6 +349,7 @@ nav {display: none;}
 .modal .body-lutron {
     text-align: left;
     margin-top: 20px;
+    overflow-y: auto;
 }
 
 .slideshow-container {
@@ -371,7 +376,8 @@ nav {display: none;}
 }
 
 .text-content {
-    margin-top: 20px;
+    margin-top: 10px;
+    padding-left: 10px;
 }
 
 .prev,
@@ -392,6 +398,65 @@ nav {display: none;}
 .next {
     right: 10px;
 }
+
+/* ML */
+.body-ML {
+    margin-top: 5px;
+    max-height: 550px;
+    text-align: left;
+    overflow-y: auto;
+}
+
+/* Make the second set of images smaller */
+.ml__img--small {
+    max-width: 300;
+    max-height: 300;
+}
+
+.slideshow-container-ml {
+    height: 180px;
+}
+
+
+.prev-ml {
+    color: var(--clr-light);
+}
+
+.next-ml {
+    color: var(--clr-light);
+}
+
+/* SoilSense */
+
+.soilsense__img {
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
